@@ -61,26 +61,43 @@ using DataStructures;
 
 #region Stack
 
-var bracketStack = new BracketStack();
+//var bracketStack = new BracketStack();
 
-bracketStack.Push("[");
-bracketStack.Push("{");
-bracketStack.Push("}");
-bracketStack.Push("(");
-bracketStack.Push("[");
-bracketStack.Push("]");
+//bracketStack.Push("[");
+//bracketStack.Push("{");
+//bracketStack.Push("}");
+//bracketStack.Push("(");
+//bracketStack.Push("[");
+//bracketStack.Push("]");
 
-var customStack = new CustomStack<string>();
-customStack.Push("[");
-customStack.Push("{");
-customStack.Push("}");
-customStack.Push(")");
-customStack.Push("[");
-customStack.Push("]");
+//var customStack = new CustomStack<string>();
+//customStack.Push("[");
+//customStack.Push("{");
+//customStack.Push("}");
+//customStack.Push(")");
+//customStack.Push("[");
+//customStack.Push("]");
 
-var lastItem = customStack.Pop();
+//var lastItem = customStack.Pop();
 
-var peekLastItem = customStack.Peek();
+//var peekLastItem = customStack.Peek();
+
+#endregion
+
+#region Queue
+
+//var queue = new CustomQueue<int>();
+
+//queue.Enqueue(1);
+//queue.Enqueue(2);
+//queue.Enqueue(3);
+//queue.Enqueue(4);
+//queue.Enqueue(5);
+
+//queue.Dequeue();
+
+//var peekFirst = queue.Peek();
+
 #endregion
 
 Console.WriteLine("Hello world!");
