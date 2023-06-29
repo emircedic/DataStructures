@@ -30,18 +30,18 @@ using DataStructures;
 
 #region Doubly Linked List
 
-var doublyLinkedList = new DoublyLinkedList<int>();
-doublyLinkedList.Add(0);
-doublyLinkedList.Add(1);
-doublyLinkedList.Add(2);
-doublyLinkedList.Add(3);
-doublyLinkedList.Add(4);
+//var doublyLinkedList = new DoublyLinkedList<int>();
+//doublyLinkedList.Add(0);
+//doublyLinkedList.Add(1);
+//doublyLinkedList.Add(2);
+//doublyLinkedList.Add(3);
+//doublyLinkedList.Add(4);
 
 //doublyLinkedList.AddFirst(5);
 
-var peekFirst = doublyLinkedList.PeekFirst();
+//var peekFirst = doublyLinkedList.PeekFirst();
 
-var peekLast = doublyLinkedList.PeekLast();
+//var peekLast = doublyLinkedList.PeekLast();
 
 //var removeFirst = doublyLinkedList.RemoveFirst();
 
@@ -59,4 +59,30 @@ var peekLast = doublyLinkedList.PeekLast();
 
 #endregion
 
+#region Stack
+
+var bracketStack = new BracketStack();
+
+bracketStack.Push("[");
+bracketStack.Push("{");
+bracketStack.Push("}");
+bracketStack.Push("(");
+bracketStack.Push("[");
+bracketStack.Push("]");
+
+var customStack = new CustomStack<string>();
+customStack.Push("[");
+customStack.Push("{");
+customStack.Push("}");
+customStack.Push(")");
+customStack.Push("[");
+customStack.Push("]");
+
+var lastItem = customStack.Pop();
+
+var peekLastItem = customStack.Peek();
+#endregion
+
 Console.WriteLine("Hello world!");
+
+

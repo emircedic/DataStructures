@@ -267,6 +267,4 @@
             return Value.ToString();
         }
     }
-
-    // Todo: Add custom iterator
 }
