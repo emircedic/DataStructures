@@ -100,6 +100,21 @@ using DataStructures;
 
 #endregion
 
+#region Priority Queues
+
+//var priorityQueue = new PriorityQueue<int>(new List<int>() { 22, 6, 20, 5, 3, 26, 1, 27, 30, 35, 26, 66, 24 });
+//var isMinHeapVariant = priorityQueue.CheckMinHeapVariant(0);
+
+//var item = priorityQueue.Poll();
+//isMinHeapVariant = priorityQueue.CheckMinHeapVariant(0);
+
+//item = priorityQueue.Peek();
+
+//priorityQueue.Add(2);
+//isMinHeapVariant = priorityQueue.CheckMinHeapVariant(0);
+
+#endregion
+
 Console.WriteLine("Hello world!");
 
 
