@@ -115,6 +115,29 @@ using DataStructures;
 
 #endregion
 
+#region Union Find
+
+//var unionFind = new UnionFind(7);
+
+//unionFind.Unify(0, 1);
+//unionFind.Unify(2, 3);
+//unionFind.Unify(4, 5);
+
+//var zeroAndOneConnection = unionFind.AreConnected(0, 1);
+//var twoAndThreeConnection = unionFind.AreConnected(2, 3);
+//var fourAndFiveConnection = unionFind.AreConnected(4, 5);
+
+//unionFind.Unify(1, 2);
+//unionFind.Unify(4, 0);
+
+//var root = unionFind.Find(3);
+//var componentSize = unionFind.GetComponentSize(5);
+
+//var elementSize = unionFind.GetElementCount();
+//var components = unionFind.GetComponentCount();
+
+#endregion
+
 Console.WriteLine("Hello world!");
 
 
