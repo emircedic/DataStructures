@@ -138,6 +138,30 @@ using DataStructures;
 
 #endregion
 
+#region Binary Search Tree
+
+//var binarySearchTree = new BinarySearchTree();
+
+//var isEmpty = binarySearchTree.IsEmpty();
+//var size = binarySearchTree.GetSize();
+
+//binarySearchTree.Add(10);
+//binarySearchTree.Add(20);
+//binarySearchTree.Add(30);
+//binarySearchTree.Add(25);
+//binarySearchTree.Add(5);
+
+//size = binarySearchTree.GetSize();
+//isEmpty = binarySearchTree.IsEmpty();
+
+//var nodeExists = binarySearchTree.Contains(10);
+//var removedNode = binarySearchTree.Remove(10);
+//nodeExists = binarySearchTree.Contains(10);
+
+//var height = binarySearchTree.GetHeight();
+
+#endregion
+
 Console.WriteLine("Hello world!");
 
 
