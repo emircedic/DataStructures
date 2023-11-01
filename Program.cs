@@ -162,6 +162,40 @@ using DataStructures;
 
 #endregion
 
+#region Hash Table Seperate Chaining
+
+//var hashTableSeperateChaining = new HashTableSeperateChaining<int, string>(10);
+
+//var isEmpty = hashTableSeperateChaining.IsEmpty();
+//var size = hashTableSeperateChaining.Size();
+
+//hashTableSeperateChaining.Insert(1, "One");
+//hashTableSeperateChaining.Insert(2, "Two");
+//hashTableSeperateChaining.Insert(3, "Three");
+//hashTableSeperateChaining.Insert(4, "Four");
+//hashTableSeperateChaining.Insert(5, "Five");
+
+//var containsOne = hashTableSeperateChaining.ContainsKey(1);
+//var getOne = hashTableSeperateChaining.Get(1);
+//var removeOne = hashTableSeperateChaining.Remove(1);
+
+//isEmpty = hashTableSeperateChaining.IsEmpty();
+//size = hashTableSeperateChaining.Size();
+
+//hashTableSeperateChaining.Insert(1, "One");
+//var newGetOne = hashTableSeperateChaining.Get(1);
+
+//isEmpty = hashTableSeperateChaining.IsEmpty();
+//size = hashTableSeperateChaining.Size();
+
+//hashTableSeperateChaining.Clear();
+
+//isEmpty = hashTableSeperateChaining.IsEmpty();
+//size = hashTableSeperateChaining.Size();
+
+#endregion
+
+
 Console.WriteLine("Hello world!");
 
 
