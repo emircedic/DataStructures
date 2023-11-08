@@ -195,6 +195,47 @@ using DataStructures;
 
 #endregion
 
+#region Hash Table Quadratic Probing
+
+var hashTableQuadraticProbing = new HashTableQuadraticProbing();
+
+var isEmpty = hashTableQuadraticProbing.IsEmpty();
+var size = hashTableQuadraticProbing.Size();
+
+hashTableQuadraticProbing.Add(1, "One");
+hashTableQuadraticProbing.Add(2, "Two");
+hashTableQuadraticProbing.Add(3, "Three");
+
+isEmpty = hashTableQuadraticProbing.IsEmpty();
+size = hashTableQuadraticProbing.Size();
+
+var containsOne = hashTableQuadraticProbing.ContainsKey(1);
+
+var getOne = hashTableQuadraticProbing.Get(1);
+var capacity = hashTableQuadraticProbing.GetCapacity();
+
+hashTableQuadraticProbing.Add(4, "Four");
+hashTableQuadraticProbing.Add(5, "Five");
+hashTableQuadraticProbing.Add(6, "Six");
+
+capacity = hashTableQuadraticProbing.GetCapacity();
+
+var keys = hashTableQuadraticProbing.GetKeys();
+var values = hashTableQuadraticProbing.GetValues();
+
+var hasOne = hashTableQuadraticProbing.HasKey(1);
+
+var removeOne = hashTableQuadraticProbing.Remove(1);
+
+isEmpty = hashTableQuadraticProbing.IsEmpty();
+size = hashTableQuadraticProbing.Size();
+
+hashTableQuadraticProbing.Clear();
+
+isEmpty = hashTableQuadraticProbing.IsEmpty();
+size = hashTableQuadraticProbing.Size();
+
+#endregion
 
 Console.WriteLine("Hello world!");
 
