@@ -197,46 +197,63 @@ using DataStructures;
 
 #region Hash Table Quadratic Probing
 
-var hashTableQuadraticProbing = new HashTableQuadraticProbing();
+//var hashTableQuadraticProbing = new HashTableQuadraticProbing();
 
-var isEmpty = hashTableQuadraticProbing.IsEmpty();
-var size = hashTableQuadraticProbing.Size();
+//var isEmpty = hashTableQuadraticProbing.IsEmpty();
+//var size = hashTableQuadraticProbing.Size();
 
-hashTableQuadraticProbing.Add(1, "One");
-hashTableQuadraticProbing.Add(2, "Two");
-hashTableQuadraticProbing.Add(3, "Three");
+//hashTableQuadraticProbing.Add(1, "One");
+//hashTableQuadraticProbing.Add(2, "Two");
+//hashTableQuadraticProbing.Add(3, "Three");
 
-isEmpty = hashTableQuadraticProbing.IsEmpty();
-size = hashTableQuadraticProbing.Size();
+//isEmpty = hashTableQuadraticProbing.IsEmpty();
+//size = hashTableQuadraticProbing.Size();
 
-var containsOne = hashTableQuadraticProbing.ContainsKey(1);
+//var containsOne = hashTableQuadraticProbing.ContainsKey(1);
 
-var getOne = hashTableQuadraticProbing.Get(1);
-var capacity = hashTableQuadraticProbing.GetCapacity();
+//var getOne = hashTableQuadraticProbing.Get(1);
+//var capacity = hashTableQuadraticProbing.GetCapacity();
 
-hashTableQuadraticProbing.Add(4, "Four");
-hashTableQuadraticProbing.Add(5, "Five");
-hashTableQuadraticProbing.Add(6, "Six");
+//hashTableQuadraticProbing.Add(4, "Four");
+//hashTableQuadraticProbing.Add(5, "Five");
+//hashTableQuadraticProbing.Add(6, "Six");
 
-capacity = hashTableQuadraticProbing.GetCapacity();
+//capacity = hashTableQuadraticProbing.GetCapacity();
 
-var keys = hashTableQuadraticProbing.GetKeys();
-var values = hashTableQuadraticProbing.GetValues();
+//var keys = hashTableQuadraticProbing.GetKeys();
+//var values = hashTableQuadraticProbing.GetValues();
 
-var hasOne = hashTableQuadraticProbing.HasKey(1);
+//var hasOne = hashTableQuadraticProbing.HasKey(1);
 
-var removeOne = hashTableQuadraticProbing.Remove(1);
+//var removeOne = hashTableQuadraticProbing.Remove(1);
 
-isEmpty = hashTableQuadraticProbing.IsEmpty();
-size = hashTableQuadraticProbing.Size();
+//isEmpty = hashTableQuadraticProbing.IsEmpty();
+//size = hashTableQuadraticProbing.Size();
 
-hashTableQuadraticProbing.Clear();
+//hashTableQuadraticProbing.Clear();
 
-isEmpty = hashTableQuadraticProbing.IsEmpty();
-size = hashTableQuadraticProbing.Size();
+//isEmpty = hashTableQuadraticProbing.IsEmpty();
+//size = hashTableQuadraticProbing.Size();
 
 #endregion
 
+#region Fenwick Tree
+
+//var valuesForFenwickTree = new long[] { 0, 1, 2, 2, 4 };
+//var fenwickTree = new FenwickTree(valuesForFenwickTree);
+
+//var getSum = fenwickTree.Sum(1, 4);
+
+//fenwickTree.Sum(1, 4);
+//fenwickTree.Add(3, 1);
+
+//getSum = fenwickTree.Sum(1, 4);
+//fenwickTree.Set(4, 0);
+
+//getSum = fenwickTree.Sum(1, 4);
+//var getTwo = fenwickTree.Get(2);
+
+#endregion
 Console.WriteLine("Hello world!");
 
 
