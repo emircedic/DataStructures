@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DataStructures;
+using DataStructures.AVL;
 
 #region Dynamic Array
 
@@ -254,6 +255,31 @@ using DataStructures;
 //var getTwo = fenwickTree.Get(2);
 
 #endregion
+
+#region AVL Tree
+
+// a, b, c, d, e, f, g
+
+//var avlTree = new AVLTree();
+//var insertA = avlTree.Insert("a");
+//var insertB = avlTree.Insert("b");
+//var insertC = avlTree.Insert("c");
+//var insertD = avlTree.Insert("d");
+//var insertE = avlTree.Insert("e");
+//var insertF = avlTree.Insert("f");
+//var insertG = avlTree.Insert("g");
+
+//var size = avlTree.Size();
+//var containsF = avlTree.Contains("f");
+//var remove = avlTree.Remove("f");
+//containsF = avlTree.Contains("f");
+
+//var isEmpty = avlTree.IsEmpty();
+//var height = avlTree.GetHeight();
+//size = avlTree.Size();
+
+#endregion
+
 Console.WriteLine("Hello world!");
 
 
