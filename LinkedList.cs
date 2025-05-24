@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructures.asdf
 {
-    internal class Stack
-    {
-    }
+    public class SinglyLinkedList {}
+
+    public class DoublyLinkedList {}
 }

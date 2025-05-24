@@ -6,7 +6,5 @@ using System.Threading.Tasks;
 
 namespace DataStructures.asdf
 {
-    internal class Stack
-    {
-    }
+    public class Trie {}
 }
