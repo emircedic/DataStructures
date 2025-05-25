@@ -1,4 +1,4 @@
-﻿namespace DataStructures.asdf
+﻿namespace DataStructures
 {
     public class StaticArray
     {
@@ -60,8 +60,6 @@
             Console.WriteLine();
         }
     }
-
-
     public class DynamicArray
     {
         int capacity;
@@ -109,6 +107,16 @@
             {
                 length--;
             }
+        }
+
+        public void RemoveAt(int index)
+        {
+            for (int i = index; i < length - 1; i++)
+            {
+                arr[i] = arr[i + 1];
+            }
+
+            length--;
         }
 
         // Get value at i-th index
