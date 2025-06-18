@@ -125,10 +125,10 @@
     public class DoublyLinkedListNode
     {
         public int Value { get; set; }
-        public Node Previous { get; set; }
-        public Node Next { get; set; }
+        public DoublyLinkedListNode Previous { get; set; }
+        public DoublyLinkedListNode Next { get; set; }
     
-        public Node (int value)
+        public DoublyLinkedListNode(int value)
         {
             Value = value;
         }
