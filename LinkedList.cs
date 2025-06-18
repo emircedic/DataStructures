@@ -13,51 +13,111 @@
 
     public class SinglyLinkedList
     {
-        SinglyLinkedListNode head;
-        SinglyLinkedListNode tail;
-
-        public SinglyLinkedList()
+        SinglyLinkedListNode _headNode;
+        SinglyLinkedListNode _tailNode;
+        int _nodeCount;
+    
+        public SinglyLinkedList() {}
+    
+        public int Get(int index)
         {
-            head = new SinglyLinkedListNode(-1);
-            tail = head;
+            if (index >= _nodeCount)
+                return -1;
+    
+            var currentNode = _headNode;
+    
+            for (int i = 0; i < index; i++)
+                currentNode = currentNode.Next;
+    
+            return currentNode.Value;
         }
-
-        public void InsertEnd(int val)
+    
+        public void InsertHead(int val)
         {
-            tail.Next = new SinglyLinkedListNode(val);
-            tail = tail.Next;
-        }
-
-        public void Remove(int index)
-        {
-            int i = 0;
-            SinglyLinkedListNode curr = head;
-            while (i < index && curr != null)
+            var newNode = new SinglyLinkedListNode(val);
+    
+            if (_headNode == null)
             {
-                i++;
-                curr = curr.Next;
+                _headNode = newNode;
+                _tailNode = newNode;
             }
-
-            // Remove the node ahead of curr
-            if (curr != null && curr.Next != null)
+            else
             {
-                if (curr.Next == tail)
+                newNode.Next = _headNode;
+                _headNode = newNode;
+            }
+    
+            _nodeCount++;
+        }
+    
+        public void InsertTail(int val)
+        {
+            var newNode = new SinglyLinkedListNode(val);
+    
+            if (_tailNode == null)
+            {
+                _tailNode = newNode;
+                _headNode = newNode;
+            }
+            else
+            {
+                _tailNode.Next = newNode;
+                _tailNode = newNode;
+            }
+    
+            _nodeCount++;
+        }
+    
+        public bool Remove(int index)
+        {
+            if (index >= _nodeCount)
+                return false;
+    
+            if (index == 0)
+            {
+                _headNode = _headNode.Next;
+            }
+            else
+            {
+                var currentNode = _headNode;
+    
+                for (int i = 0; i < index - 1; i++)
+                    currentNode = currentNode.Next;
+    
+                if (index == _nodeCount - 1)
                 {
-                    tail = curr;
+                    currentNode.Next = null;
+                    _tailNode = currentNode;
                 }
-                curr.Next = curr.Next.Next;
+                else
+                {
+                    currentNode.Next = currentNode.Next?.Next;
+                }
             }
-        }
-
-        public void Print()
-        {
-            SinglyLinkedListNode curr = head.Next;
-            while (curr != null)
+    
+            _nodeCount--;
+    
+            if (_nodeCount == 0)
             {
-                Console.WriteLine(curr.Value + " -> ");
-                curr = curr.Next;
+                _headNode = null;
+                _tailNode = null;
             }
-            Console.WriteLine("");
+    
+            return true;
+        }
+    
+        public List<int> GetValues()
+        {
+            List<int> values = new();
+            var currentNode = _headNode;
+    
+            while (currentNode != null)
+            {
+                values.Add(currentNode.Value);
+                currentNode = currentNode.Next;
+            }
+    
+            return values;
         }
     }
 
