@@ -1,5 +1,10 @@
 ﻿namespace DataStructures
 {
+    // Time complexity:
+    // Peek Min/Max: O(1)
+    // Push: O(log n)
+    // Pop: O(log n)
+    // Heapify array: O(n)
     public class MinHeap
     {
         private List<int> _minHeap = new List<int>() { 0 };
