@@ -62,26 +62,20 @@ namespace DataStructures
         {
             BinarySearchTreeNode currentNode = Root;
 
-            if (currentNode == null)
-                return -1;
-
-            while (currentNode.Left != null)
+            while (currentNode != null && currentNode.Left != null)
                 currentNode = currentNode.Left;
 
-            return currentNode.Value;
+            return currentNode?.Value ?? - 1;
         }
 
         public int GetMax()
         {
             BinarySearchTreeNode currentNode = Root;
 
-            if (currentNode == null)
-                return -1;
-
-            while (currentNode.Right != null)
+            while (currentNode != null && currentNode.Right != null)
                 currentNode = currentNode.Right;
 
-            return currentNode.Value;
+            return currentNode?.Value ?? - 1;
         }
 
         public void Remove(int key)
