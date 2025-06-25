@@ -80,44 +80,39 @@
 
         public void Heapify(List<int> nums)
         {
-            if (nums.Count == 0)
-                return;
-
-            nums.Add(nums[0]);
-            _minHeap = nums;
-
-            int currentNode = (_minHeap.Count - 1) / 2;
-
-            while (currentNode > 0)
+            var minHeap = new List<int>() { 0 };
+            minHeap.AddRange(nums);
+            
+            for (int i = minHeap.Count / 2; i > 0; i--)
             {
-                var currentIndex = currentNode;
-
-                while ((currentIndex * 2) < _minHeap.Count)
+                var currentIndex = i;
+    
+                while ((currentIndex * 2) < minHeap.Count)
                 {
-                    if ((currentIndex * 2) + 1 < _minHeap.Count &&
-                        _minHeap[(currentIndex * 2) + 1] < _minHeap[currentIndex * 2] &&
-                        _minHeap[(currentIndex * 2) + 1] < _minHeap[currentIndex])
+                    if (((currentIndex * 2) + 1) < minHeap.Count &&
+                        minHeap[(currentIndex * 2) + 1] < minHeap[currentIndex * 2] &&
+                        minHeap[((currentIndex * 2) + 1)] < minHeap[currentIndex])
                     {
-                        var temporaryRightChildValue = _minHeap[(currentIndex * 2) + 1];
-                        _minHeap[(currentIndex * 2) + 1] = _minHeap[currentIndex];
-                        _minHeap[currentIndex] = temporaryRightChildValue;
+                        var tempValue = minHeap[currentIndex];
+                        minHeap[currentIndex] = minHeap[(currentIndex * 2) + 1];
+                        minHeap[(currentIndex * 2) + 1] = tempValue;
+    
                         currentIndex = (currentIndex * 2) + 1;
                     }
-                    else if (_minHeap[currentIndex * 2] < _minHeap[currentIndex])
+                    else if (minHeap[currentIndex * 2] < minHeap[currentIndex])
                     {
-                        var temporaryLeftChildValue = _minHeap[currentIndex * 2];
-                        _minHeap[currentIndex * 2] = _minHeap[currentIndex];
-                        _minHeap[currentIndex] = temporaryLeftChildValue;
+                        var tempValue = minHeap[currentIndex];
+                        minHeap[currentIndex] = minHeap[currentIndex * 2];
+                        minHeap[currentIndex * 2] = tempValue;
+    
                         currentIndex = currentIndex * 2;
                     }
                     else
-                    {
                         break;
-                    }
                 }
-
-                currentNode--;
             }
+    
+            _minHeap = minHeap;
         }
     }
 }
