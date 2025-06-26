@@ -42,9 +42,7 @@
                 if (_hashMap[hashValue] == null)
                 {
                     // Insert new value.
-                    var node = new Node(key, value);
-                    _hashMap[hashValue] = node;
-
+                    _hashMap[hashValue] = new Node(key, value);
                     _size++;
 
                     // Check if the hash map should be resized.
@@ -130,25 +128,26 @@
 
         public void Resize()
         {
-            // Update capacity.
+            // Double the capacity.
             _capacity *= 2;
-
-            // Create a copy of the old hash map and set its old instance to a new hash map with double the capacity.
-            Node[] oldHashMap = _hashMap;
-            _hashMap = new Node[_capacity];
-
-            // Set the size to 0 and increment it while re-adding the existing hash map values.
+            
+            // Reset the size to 0.
+            // Will increase while we re-add the items from the old hash map.
             _size = 0;
 
-            // Iterate through old hash map.
+            // Create a new reference to the old hash map.
+            Node[] oldHashMap = _hashMap;
+            
+            // Set the old reference to a new empty array. 
+            _hashMap = new Node[_capacity];
+
+            // Iterate through the old hash map.
             foreach (Node node in oldHashMap)
             {
                 if (node == null)
                     continue;
 
-                var hashValue = Hash(node.Key);
-                _hashMap[hashValue] = node;
-                _size++;
+                Insert(node.Key, node.Value);
             }
         }
     }
