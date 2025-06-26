@@ -120,17 +120,13 @@
                     return true;
                 }
             }
+
+            return false;
         }
 
-        public int GetSize()
-        {
-            return _size;
-        }
+        public int GetSize() => _size;
 
-        public int GetCapacity()
-        {
-            return _capacity;
-        }
+        public int GetCapacity() => _capacity;
 
         public void Resize()
         {
