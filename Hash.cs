@@ -114,7 +114,8 @@
                 }
                 else if (_hashMap[hashValue].Key == key)
                 {
-                    _hashMap[hashValue] = null;
+                    // Set tombstone to not break open addressing.
+                    _hashMap[hashValue] = new Node(-1, -1);
                     _size--;
                     return true;
                 }
