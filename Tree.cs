@@ -245,8 +245,6 @@ namespace DataStructures
     }
     public class AVLTree
     {
-
-
         public AVLNode? Root { get; set; }
         private int nodeCount = 0;
 
