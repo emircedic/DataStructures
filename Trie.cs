@@ -1,5 +1,14 @@
 ﻿namespace DataStructures
 {
+    // n - Length of input word.
+    // l - Total count of words in trie.
+     
+    // Time complexity:
+    // Insert: O(n)
+    // Search: O(n)
+    // StartsWith: O(n)
+     
+    // Space complexity: O(n * l)
     public class TrieNode
     {
         public bool IsEndOfWord;   // isLeaf
