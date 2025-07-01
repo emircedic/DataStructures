@@ -1,5 +1,9 @@
 ﻿namespace DataStructures
 {
+    // Time complexity:
+    // Enqueue: O(1)
+    // Dequeue: O(1)
+     
     public class QueueWithPointers
     {
         public QueueNode Left;  // front of Queue   front -> [1,2,3]
@@ -107,6 +111,122 @@
         {
             this.Value = val;
             this.Next = null;
+        }
+    }
+
+    // Queue with doubly-linked nodes (Previous and Next).
+    public class Deque
+    {
+        private DequeNode _headNode;
+        private DequeNode _tailNode;
+    
+        private int _nodeCount;
+    
+        public Deque() {}
+    
+        public bool IsEmpty() => _nodeCount == 0;
+    
+        public void Append(int value)
+        {
+            var newNode = new DequeNode(value);
+    
+            if (_headNode == null && _tailNode == null)
+            {
+                _headNode = newNode;
+                _tailNode = newNode;
+            }
+            else
+            {
+                _tailNode.Next = newNode;
+                newNode.Previous = _tailNode;
+    
+                _tailNode = newNode;
+            }
+    
+            _nodeCount++;
+        }
+    
+        public void Appendleft(int value)
+        {
+            var newNode = new DequeNode(value);
+    
+            if (_headNode == null && _tailNode == null)
+            {
+                _headNode = newNode;
+                _tailNode = newNode;
+            }
+            else
+            {
+                newNode.Next = _headNode;
+                _headNode.Previous = newNode;
+    
+                _headNode = newNode;
+            }
+    
+            _nodeCount++;
+        }
+    
+        public int Pop()
+        {
+            if (_nodeCount > 0)
+            {
+                _nodeCount--;
+    
+                var result = _tailNode.Value;
+    
+                if (_tailNode.Previous != null)
+                {
+                    _tailNode = _tailNode.Previous;
+                    _tailNode.Next = null;
+                }
+                else
+                {
+                    _tailNode = null;
+                    _headNode = null;
+                }
+    
+                return result;
+            }
+    
+            return -1;
+        }
+    
+        public int Popleft()
+        {
+            if (_nodeCount > 0)
+            {
+                _nodeCount--;
+    
+                var result = _headNode.Value;
+    
+                if (_headNode.Next != null)
+                {
+                    _headNode = _headNode.Next;
+                    _headNode.Previous = null;
+                }
+                else
+                {
+                    _headNode = null;
+                    _tailNode = null;
+                }
+    
+                return result;
+            }
+    
+            return -1;
+        }
+    }
+    
+    public class DequeNode
+    {
+        public DequeNode Previous { get; set; }
+        public DequeNode Next { get; set; }
+    
+        public int Value { get; set; }
+    
+        public DequeNode(int value)
+        {
+            Value = value;
         }
     }
 }
