@@ -1,8 +1,15 @@
 ﻿namespace DataStructures
 {
+    // Time complexity: 
+    // Find() - O(log n) - Omega(1)
+    // Union() - O(log n) - Omega(1)
+    // IsSameComponent() - O (log n) - Omega(1)
+    // GetNumComponents() - O(n)
+
+    // Space complexity: O (n)
+     
     public class UnionFind
     {
-
         // Represents the parent of each node.
         Dictionary<int, int> parents = new Dictionary<int, int>();
 
@@ -11,12 +18,11 @@
 
         public UnionFind(int n)
         {
-
             for (int i = 0; i < n; i++)
             {
                 // Set each node as its own parent.
                 parents[i] = i;
-
+                
                 ranks[i] = 0;
             }
         }
