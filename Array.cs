@@ -1,5 +1,7 @@
 ﻿namespace DataStructures
 {     
+    // Time complexity: O(1)
+    // Space complexity: O(1)
     public class DynamicArray
     {
         int capacity;
