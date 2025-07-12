@@ -16,6 +16,9 @@ namespace DataStructures
             Value = value;
         }
     }
+
+    // Time complexity: O(n) - Theta(log n)
+    // Space complexity: O(n) - Theta(log n)
     public class BinarySearchTree
     {
         private BinarySearchTreeNode Root { get; set; }
@@ -157,6 +160,7 @@ namespace DataStructures
             RightIndex = rightIndex;
         }
     }
+    
     public class SegmentTree
     {
 
@@ -167,7 +171,10 @@ namespace DataStructures
             _segmentNodeRoot = GenerateSegmentTree(nums, 0, nums.Length - 1);
         }
 
-        public void update(int index, int val)
+            
+        // Time complexity: O(log n)
+        // Space complexity: O(log n)
+        public void Update(int index, int val)
         {
             UpdateInternal(index, val, _segmentNodeRoot);
         }
@@ -190,7 +197,9 @@ namespace DataStructures
             currentNode.Value = currentNode.LeftNode?.Value + currentNode.RightNode?.Value ?? 0;
         }
 
-        public int query(int L, int R)
+        // Time complexity: O(log n)
+        // Space complexity: O(log n)        
+        public int Query(int L, int R)
         {
             Console.WriteLine("Start " + L + " " + R);
             return QueryInternal(L, R, _segmentNodeRoot);
@@ -212,6 +221,8 @@ namespace DataStructures
                        QueryInternal(midIndex + 1, rightIndex, currentNode.RightNode);
         }
 
+        // Time complexity: O(n)
+        // Space complexity: O(n)
         private SegmentNode GenerateSegmentTree(int[] nums, int leftIndex, int rightIndex)
         {
             if (leftIndex == rightIndex)
@@ -230,6 +241,8 @@ namespace DataStructures
         }
     }
 
+    // Time complexity: O(log n)
+    // Space complexity: O(log n)    
     public class AVLNode
     {
         public int BalanceFactor { get; set; }
@@ -455,6 +468,9 @@ namespace DataStructures
         }
     }
 
+    
+    // Time complexity: O(log n)
+    // Space complexity: O(1)
     public class FenwickTree
     {
         private readonly int N;
@@ -508,9 +524,6 @@ namespace DataStructures
             return sum;
         }
 
-        /// <summary>
-        /// Returns the sum between specified start and end positions.
-        /// </summary>
         public long Sum(int startPosition, int endPosition)
         {
             if (endPosition < startPosition)
