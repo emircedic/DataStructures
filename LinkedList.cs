@@ -67,8 +67,34 @@
     
             _nodeCount++;
         }
+
+        public void AddAtIndex(int index, int val)
+        {
+            if (index > _nodeCount)
+                return;
+            else if (index == 0)
+                AddAtHead(val);
+            else if (index == _nodeCount)
+                AddAtTail(val);
+            else
+            {
+                var previousNode = _headNode;
     
-        public bool Remove(int index)
+                for (int i = 0; i < index - 1; i++)
+                    previousNode = previousNode.Next;
+    
+                var nextNode = previousNode.Next;
+    
+                var newNode = new Node(val);
+                
+                previousNode.Next = newNode;
+                newNode.Next = nextNode;
+    
+                _nodeCount++;
+            }
+        }
+        
+        public bool RemoveAtIndex(int index)
         {
             if (index >= _nodeCount)
                 return false;
