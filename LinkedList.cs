@@ -76,33 +76,30 @@
             if (index == 0)
             {
                 _headNode = _headNode.Next;
+    
+                if (_headNode == null)
+                    _tailNode = null;
+            }   
+            else if (index == _nodeCount - 1)
+            {
+                var previousNode = _headNode;
+                for (int i = 0; i < _nodeCount - 2; i++)
+                    previousNode = previousNode.Next;
+    
+                _tailNode = previousNode;
+                _tailNode.Next = null;
             }
             else
             {
-                var currentNode = _headNode;
-    
+                var previousNode = _headNode;
                 for (int i = 0; i < index - 1; i++)
-                    currentNode = currentNode.Next;
+                    previousNode = previousNode.Next;
     
-                if (index == _nodeCount - 1)
-                {
-                    currentNode.Next = null;
-                    _tailNode = currentNode;
-                }
-                else
-                {
-                    currentNode.Next = currentNode.Next?.Next;
-                }
+                previousNode.Next = previousNode.Next?.Next;
             }
     
             _nodeCount--;
-    
-            if (_nodeCount == 0)
-            {
-                _headNode = null;
-                _tailNode = null;
-            }
-    
+            
             return true;
         }
     
